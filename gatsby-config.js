@@ -1,44 +1,58 @@
 module.exports = {
   plugins: [
     {
-      resolve: '@cnfe/gatsby-theme-cone',
+      resolve: 'gatsby-theme-cone',
       options: {},
     },
   ],
   siteMetadata: {
-    title: 'Cone',
+    title: 'N2',
     description: 'Gatsby starter of cone theme',
-    siteUrl: 'http://gitlab.alibaba-inc.com/coll/gatsby-starter-theme-cone',
-    githubUrl: 'http://gitlab.alibaba-inc.com/coll/gatsby-starter-theme-cone',
+    siteUrl: 'https://github.com/cnfe/gatsby-starter-theme-cone',
+    githubUrl: 'https://github.com/cnfe/gatsby-starter-theme-cone',
+    logoUrl:
+    'https://img.alicdn.com/tfs/TB1GruToxn1gK0jSZKPXXXvUXXa-500-121.png',
     navs: [
       {
         slug: 'docs/specification/started',
         title: {
           zh: '设计语言',
-        },
+          en: 'Specification'
+        }
       },
       {
         slug: 'examples',
         title: {
           zh: '图表演示',
-        },
+          en: 'Examples'
+        }
       },
+      {
+        slug: 'independent',
+        title: {
+          zh: '独立',
+          en: 'MyApp'
+        }
+        // target: '_blank',
+      }
     ],
     docs: [
       {
         slug: 'specification/category',
         title: {
           zh: '分类一',
+          en: 'category1'
         },
-        order: 4,
+        order: 4
       },
       {
         slug: 'specification/category/three',
         title: {
           zh: '第三层',
+          en: 'three level'
         },
-        order: 2,
-      },
+        order: 2
+      }
     ],
     examples: [
       {
@@ -46,10 +60,11 @@ module.exports = {
         icon: 'pie',
         title: {
           zh: '饼图分类',
-        },
-      },
+          en: 'Category'
+        }
+      }
     ],
-    showSearch: false, // 是否展示搜索框
+    showSearch: true, // 是否展示搜索框
     showChinaMirror: false, // 是否展示国内镜像链接
     showAntVProductsCard: false, // 是否展示 AntV 系列产品的卡片链接
     showLanguageSwitcher: false, // 用于定义是否展示语言切换

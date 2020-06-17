@@ -1,5 +1,5 @@
 {
-  "name": "@cnfe/gatsby-starter-theme-cone",
+  "name": "gatsby-starter-theme-cone",
   "private": true,
   "version": "1.0.0",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "@cnfe/gatsby-theme-cone": "0.0.1-beta.0",
+    "gatsby-theme-cone": "^0.0.5",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "gatsby": "^2.15.34"
