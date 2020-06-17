@@ -64,7 +64,7 @@ module.exports = {
         }
       }
     ],
-    showSearch: true, // 是否展示搜索框
+    showSearch: false, // 是否展示搜索框
     showChinaMirror: false, // 是否展示国内镜像链接
     showAntVProductsCard: false, // 是否展示 AntV 系列产品的卡片链接
     showLanguageSwitcher: false, // 用于定义是否展示语言切换
