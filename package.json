@@ -1,0 +1,34 @@
+{
+  "name": "@cnfe/gatsby-starter-theme-cone",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/cnfe/gatsby-starter-theme-cone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnfe/gatsby-starter-theme-cone"
+  },
+  "bugs": {
+    "url": "https://github.com/cnfe/gatsby-starter-theme-cone/issues"
+  },
+  "scripts": {
+    "start": "npm run develop",
+    "develop": "gatsby develop -H 0.0.0.0 --open",
+    "build": "gatsby build --prefix-paths",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@antv/g2": "^3.5.9",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@cnfe/gatsby-theme-cone": "0.0.1-beta.0",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "gatsby": "^2.15.34"
+  },
+  "tnpm": {
+    "mode": "npm"
+  }
+}
