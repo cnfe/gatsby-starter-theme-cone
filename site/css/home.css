@@ -3,6 +3,8 @@ div[class*='Header-module'] h1 a img[alt='logo'] {
 }
 
 img[class*='Banner-module--backLeftBottom'],
+div[class*="NavigatorBanner-module--button"],
+a[class*="NavigatorBanner-module--button"],
 span[aria-label='edit'].anticon-edit {
   display: none;
 }
