@@ -1,3 +1,21 @@
+div[class*='Header-module'] h1 a img[alt='logo'] {
+  top: -3.5px;
+}
+
+img[class*='Banner-module--backLeftBottom'],
 span[aria-label='edit'].anticon-edit {
   display: none;
+}
+
+a i[class*='ExternalLinkIcon-module--export'] svg {
+  margin-right: 0;
+}
+
+.rc-footer-columns {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rc-footer-bottom-container {
+  border-top: none;
 }

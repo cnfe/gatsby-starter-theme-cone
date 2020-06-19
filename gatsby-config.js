@@ -1,8 +1,11 @@
 module.exports = {
+  assetPrefix: '//assets-daily.cainiao-inc.com', // 注意线上去除 daily
   plugins: [
     {
       resolve: 'gatsby-theme-cone',
-      options: {},
+      options: {
+        pathPrefix: '/group/repository' // 对应端坊的group和关联应用，上线后的域名 xx.xx.com/{group}/{repository}
+      },
     },
   ],
   siteMetadata: {

@@ -14,7 +14,8 @@
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop -H 0.0.0.0 --open",
-    "build": "gatsby build --prefix-paths",
+    "build": "rm -rf build && gatsby build --prefix-paths && mv public build && npm run removeFile && cp config.json build",
+    "removeFile": "find build -type f -name '*.js.map' | xargs rm && rm -rf build/en && rm -rf build/page-data/en",
     "clean": "gatsby clean"
   },
   "dependencies": {
