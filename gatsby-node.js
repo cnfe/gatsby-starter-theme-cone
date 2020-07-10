@@ -10,6 +10,10 @@ exports.onCreateWebpackConfig = ({ stage, getConfig }) => {
       config.output.chunkFilename = '[name].js';
     }
 
+    if (config.optimization && config.optimization.runtimeChunk) {
+      delete config.optimization.runtimeChunk;
+    }
+
     for (let i = 0, len = config.plugins.length; i < len; i++) {
       const plugin = config.plugins[i];
       if (plugin instanceof MiniCssExtractPlugin) {
@@ -34,8 +38,7 @@ exports.onCreateWebpackConfig = ({ stage, getConfig }) => {
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[name].css',
-        ignoreOrder: false,
-        moduleFilename: () => this.options.filename || DEFAULT_FILENAME
+        ignoreOrder: false
       })
     );
   }
