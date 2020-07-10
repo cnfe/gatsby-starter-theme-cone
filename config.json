@@ -1,5 +1,6 @@
 {
   "deploy": {
-    "strategy": "empty"
+    "strategy": "custom",
+    "version": "0.0.2"
   }
 }

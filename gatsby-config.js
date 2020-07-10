@@ -1,5 +1,6 @@
 module.exports = {
-  assetPrefix: '//assets-daily.cainiao-inc.com', // 注意线上去除 daily
+  // assetPrefix: '//cn.alicdn.com', // 线上
+  assetPrefix: `//assets-daily.cainiao-inc.com`, // 日常
   plugins: [
     {
       resolve: 'gatsby-theme-cone',

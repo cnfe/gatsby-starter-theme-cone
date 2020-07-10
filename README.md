@@ -6,6 +6,7 @@ Gatsby主题包
 * 执行`npm install`
 * 修改`gatsby-config.js`中的 `assetPrefix` 和 `pathPrefix`
 * 执行`npm run start`进行开发，开发过程中可以移除掉package.json中不需要的依赖
+* 修改config.json中的版本号
 * 执行`npm run build`构建静态页面
 * 提交代码进行端坊部署
 

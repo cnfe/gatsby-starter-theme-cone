@@ -1,8 +1,29 @@
 const _ = require('lodash');
 const React = require('react');
+const config = require('./config.json');
 
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
+function replacePathPrefix(list, pathPrefix) {
+  const newPathPrefix = `${pathPrefix}/${config.deploy.version}`;
+  list.forEach((item) => {
+    const { props } = item;
+    const { href, src } = props || {};
+    if (href && href.indexOf(pathPrefix) > -1) {
+      props.href = href.replace(pathPrefix, newPathPrefix);
+    }
+    if (src && src.indexOf(pathPrefix) > -1) {
+      props.src = src.replace(pathPrefix, newPathPrefix);
+    }
+  });
+}
+
+exports.onPreRenderHTML = ({
+  getHeadComponents,
+  getPostBodyComponents,
+  replaceHeadComponents,
+  replacePostBodyComponents
+}) => {
   const headComponents = getHeadComponents();
+  const postBodyComponents = getPostBodyComponents();
 
   const styles = _.remove(headComponents, (item) => {
     return (
@@ -21,5 +42,9 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
     }
   });
 
+  replacePathPrefix(headComponents, __PATH_PREFIX__);
+  replacePathPrefix(postBodyComponents, __PATH_PREFIX__);
+
   replaceHeadComponents(headComponents);
+  replacePostBodyComponents(postBodyComponents);
 };
